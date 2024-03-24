@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     
-    <div className="flex flex-row">
+    <div className="flex flex-row z-4">
     <div className="min-h-screen flex">
       <NavBar />
     </div>

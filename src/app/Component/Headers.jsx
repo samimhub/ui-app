@@ -2,8 +2,8 @@
 
 function Headers({ page, setPage }) {
   return (
-    <div className="flex justify-between text-black bg-slate-200 shadow-lg p-3 w-full">
-      <div className="hover:bg-slate-50">
+    <div className="flex justify-between lg:justify-around text-black bg-slate-200 shadow-lg p-3 w-full">
+      <div >
         <button
           onClick={() => setPage(1)}
           className={page == 1 && "font-bold text-blue-900"}>

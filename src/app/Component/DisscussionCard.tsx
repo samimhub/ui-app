@@ -33,7 +33,7 @@ const DisscussionItems=({ImgUrl,title,description}:DisscussionItems)=>{
         <>
          <div className="flex w-full items-start gap-5 rounded-2xl border p-4 overflow-hidden bg-slate-200 shadow ">
             <div className="flex flex-col">
-             <Image src={ImgUrl} alt="user" width={75} height={75} className="rounded-full shadow-2xl border-4
+             <Image src={ImgUrl} alt="user" width={85} height={85} className="rounded-full shadow-xl border-
             border-white"/>
             </div>
             <h3 className='blod-20 lg:bold-22 capitalize group-hover:text-white text-2xl font-bold'>{title}</h3>
