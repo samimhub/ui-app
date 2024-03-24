@@ -5,7 +5,7 @@ import React from 'react'
 function DisscussionCard() {
   return (
     <section>
-        <ul className="mt-12 grid gap-14 md:grid-cols-1 lg:grid-cols-1 w-[95%] m-auto">
+        <ul className=" grid gap-5 md:grid-cols-1 lg:grid-cols-1">
         {
           DisscussionDetails.map((details)=>(
             <DisscussionItems
@@ -31,17 +31,16 @@ type DisscussionItems={
 const DisscussionItems=({ImgUrl,title,description}:DisscussionItems)=>{
     return(
         <>
-         <li className="relative flex w-full flex-1 flex-col rounded-2xl border p-4 overflow-hidden ">
-            <div className="absolute">
-             <Image src={ImgUrl} alt="user" width={40} height={40} className="rounded-full shadow-2xl border-4
+         <div className="flex w-full items-start gap-5 rounded-2xl border p-4 overflow-hidden bg-slate-200 shadow ">
+            <div className="flex flex-col">
+             <Image src={ImgUrl} alt="user" width={75} height={75} className="rounded-full shadow-2xl border-4
             border-white"/>
             </div>
-            <h3 className='blod-20 lg:bold-22 mt-6 capitalize group-hover:text-white'>{title}</h3>
+            <h3 className='blod-20 lg:bold-22 capitalize group-hover:text-white text-2xl font-bold'>{title}</h3>
             <p>{description}</p>
             <div>
-
             </div>
-        </li>
+        </div>
         </>
        
     )

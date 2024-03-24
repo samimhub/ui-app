@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -8,7 +8,7 @@ function SideBar({open}:{open:boolean}){
   if(open) return null;
   
   return(
-    <div className='bg-black text-white w-[300px] p-5'>
+    <div className='bg-black text-white h-screen w-[300px] p-5'>
       <h1 className='text-2xl font-bold text-center cursor-pointer'>
         <span className='text-purple-500'>Go</span>India Stocks
       </h1>
@@ -45,9 +45,9 @@ function ActionButton({open,setOpen}:{open:boolean,setOpen:any}){
         <div className='flex flex-col items-center justify-center cursor-pointer h-[100px] bg-purple-500'
              onClick={()=>setOpen(!open)}>
           {open ?(
-          <FaArrowRight className="text-2xl bg-white rounded-full"/>
+          <FaArrowRight/>
           ):(
-          <FaArrowLeft className="text-2xl bg-white rounded-full"/>
+          <FaArrowLeft/>
           )}
 
         </div>
@@ -64,7 +64,6 @@ function NavBar() {
     <div className="flex">
       <SideBar open={open}/>
       <ActionButton setOpen={setOpen} open={open}/>
-      
     </div>
   )
 }
