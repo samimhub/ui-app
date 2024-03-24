@@ -10,11 +10,11 @@ export default function Home() {
 
   return (
     
-    <div className="flex flex-col">
+    <div className="flex flex-row">
    <div>
     <NavBar/>
     </div>
-    <div className=" ">
+    <div className="relative">
       <Headers/>
       <DisscussionCard/>
     </div>

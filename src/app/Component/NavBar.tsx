@@ -14,15 +14,18 @@ function NavBar() {
     <div className="flex">
       <div
         className={` ${
-          open ? "w-72" : "w-0 "
-        } bg-blue-400 h-screen p-5  pt-8 relative duration-300`}
+          open ? "w-72 bg-blue-400 h-screen p-5 pt-8 relative duration-300" : "w-0 bg-blue-800 h-14 p-2 pt-5 relative duration-300"
+        } `}
       >
+        <button>
         <img
           src="/right-arrow.png"
-          className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
+          className={`flex items-center absolute cursor-pointer -right-1 top-1/2 w-7 border-dark-purple
            border-2 rounded-full  ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
         />
+        </button>
+        
         <div className="flex gap-x-4 items-center">
         <LiaUserSolid />
           <h5
