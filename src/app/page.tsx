@@ -10,8 +10,8 @@ export default function Home() {
 
   return (
     
-    <div className="flex flex-row">
-   <div>
+  <div className="flex flex-row relative">
+   <div className="min-h-screen flex absolute ">
     <NavBar/>
     </div>
     <div className="relative">
