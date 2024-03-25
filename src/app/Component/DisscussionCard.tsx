@@ -48,10 +48,10 @@ const DisscussionItems = ({ ImgUrl, title, description }: DisscussionItems) => {
       <div>
         <h3 className="flex justify-between lg:bold-22 capitalize group-hover:text-white text-2xl font-bold">
           {title}
-          <small className="font-">2 minutes</small>
+          <small className="text-sm font-normal">2 minutes</small>
         </h3>
         <p>{description}</p>
-        <p className="flex items-center justify-between">
+        <p className="flex items-center justify-between py-2">
           <small className="flex items-center gap-1"><FaRegHeart/>2k</small>
           <small className="flex items-center gap-1"><GrView />2k</small>
           <small className="flex items-center gap-1"><BiComment/>2k Comments</small>
