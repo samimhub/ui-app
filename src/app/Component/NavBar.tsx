@@ -51,7 +51,7 @@ function SideBar({open}:{open:boolean}){
 
 function ActionButton({open,setOpen}:{open:boolean,setOpen:any}){
     return(
-      <div className='flex flex-col items-center justify-center'>
+      <div className='flex flex-col items-center justify-center h-screen'>
         <div className='flex flex-col items-center justify-center cursor-pointer h-[100px] bg-purple-500'
              onClick={()=>setOpen(!open)}>
           {open ?(

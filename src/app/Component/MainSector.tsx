@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import DisscussionCard from "./DisscussionCard";
-import MarketingStories from "./MarketingStories";
 import Headers from "./Headers";
+import MarketingStories from "./MarketingStories";
 
 function MainSector() {
 
@@ -12,7 +12,7 @@ function MainSector() {
     <div className="space-y-5 z-2">
       <Headers page={page} setPage={setPage} />
       {/*Display for desktop view*/}
-      <div className="hidden lg:flex space-x-16 ">
+      <div className="hidden lg:grid grid-cols-[3fr_1.5fr] p-5 gap-5 ">
         <div>
           <DisscussionCard/>
         </div>
@@ -23,7 +23,7 @@ function MainSector() {
 
       {/*Display for Mobile view*/ }
 
-      <div className="lg:hidden">
+      <div className="lg:hidden px-5">
       {page === 1 && <DisscussionCard />}
       {page === 2 && <MarketingStories />}
       </div>

@@ -1,6 +1,10 @@
 import {DisscussionDetails} from "@/ProjectData"
 import Image from "next/image"
 import React from 'react'
+import { FaRegHeart } from "react-icons/fa";
+import { GrView } from "react-icons/gr";
+import { BiComment } from "react-icons/bi";
+import { GoShareAndroid } from "react-icons/go";
 
 function DisscussionCard() {
   return (
@@ -28,23 +32,35 @@ type DisscussionItems={
     description:string;
 }
 
-const DisscussionItems=({ImgUrl,title,description}:DisscussionItems)=>{
-    return(
-        <>
-         <div className="flex w-full items-start gap-5 rounded-md border p-4 overflow-hidden bg-slate-200 shadow ">
-            <div className="flex flex-col">
-             <Image src={ImgUrl} alt="user" width={85} height={85} className="rounded-full shadow-xl border-
-            border-white"/>
-            </div>
-            <h3 className='blod-20 lg:bold-22 capitalize group-hover:text-white text-2xl font-bold'>{title}</h3>
-            <p>{description}</p>
-            <div>
-            </div>
-        </div>
-        </>
-       
-    )
-}
+const DisscussionItems = ({ ImgUrl, title, description }: DisscussionItems) => {
+  return (
+    <div className="flex flex-col lg:flex-row w-full items-start gap-5 rounded-2xl border p-4 overflow-hidden bg-slate-200 shadow">
+      <div>
+        <Image
+          src={ImgUrl}
+          alt="user"
+          width={100}
+          height={100}
+          className="rounded-full shadow-2xl border-4
+            border-white"
+        />
+      </div>
+      <div>
+        <h3 className="flex justify-between lg:bold-22 capitalize group-hover:text-white text-2xl font-bold">
+          {title}
+          <small className="font-normal">2 minutes</small>
+        </h3>
+        <p>{description}</p>
+        <p className="flex flex-row items-center justify-between">
+          <small><FaRegHeart/>2k</small>
+          <small><GrView />2k</small>
+          <small><BiComment/>2k Comments</small>
+          <small><GoShareAndroid/>Share</small>
+        </p>
+      </div>
+    </div>
+  );
+};
 
 
 export default DisscussionCard

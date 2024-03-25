@@ -55,13 +55,4 @@ export const DisscussionDetails = [
         description: 'Full-stack development encompasses both frontend and backend programming, enabling developers to create complete, end-to-end web applications, handling user interfaces,'
       }
   ];
-  export const Menus = [
-    { title: "Disscussion Fourm", src: "disscuse" },
-    { title: "Market Stories", src: "market" },
-    { title: "Sentiment", gap: true },
-    { title: "Market "},
-    { title: "Sector"},
-    { title: "Watchlist"},
-    { title: "Events", gap: true },
-    { title: "News/Interview"},
-  ];
+  

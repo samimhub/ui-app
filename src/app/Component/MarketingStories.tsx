@@ -3,42 +3,44 @@
 import { MarketDetails } from "@/ProjectData";
 import Image from "next/image";
 
-function MarketingStories() {
-  return (
-    <section className="max-container padding-container gap-8">
-      <div className=" grid gap-8 md:grid-cols-1">
-        {
-          MarketDetails.map((details)=>(
+    function MarketingStories() {
+      return (
+        <section className="flex flex-col gap-5 items-center">
+          {MarketDetails.map((details) => (
             <PortfolioItem
-            key={details.title}
-            ImgURL={details.ImgUrl}
-            title={details.title}
-            description={details.description}
+              key={details.title}
+              ImgURL={details.ImgUrl}
+              title={details.title}
+              description={details.description}
             />
-          ))
-        }
-      </div>
-    </section>
-  );
-}
+          ))}
+      </section>
+    );
+    }
+
 
 type PortfolioItem={
   title:string;
   ImgURL:string;
   description:string;
 }
-const PortfolioItem =({title,ImgURL,description}:PortfolioItem) =>{
-return(
-  <div className="flex lg:w-1/2 flex-1 flex-col items-center justify-center rounded-md border overflow-hidden">
-   
-      <div className="group-hover:scale-110 transition-all duration-1000">
-        <Image src={ImgURL} alt="map" width={444} height={200}/>
+const PortfolioItem = ({ title, ImgURL, description }: PortfolioItem) => {
+  return (
+    <div className="rounded-md border shadow overflow-hidden w-full ">
+      <div>
+        <Image
+          src={ImgURL}
+          alt="map"
+          width={444}
+          height={200}
+          className="object-cover w-full h-52"
+        />
       </div>
       <div className="px-6 py-2">
-      <h3 className=" my-2 capitalize">{title}</h3>
-      <p className="regular-16 text-gray-30">{description}</p>
+        <h3 className="font-semibold text-xl uppercase">{title}</h3>
+        <p className="regular-16 text-gray-600 w-100">{description}</p>
+      </div>
     </div>
-  </div>
-)
-}
+  );
+};
 export default MarketingStories
