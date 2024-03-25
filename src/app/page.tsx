@@ -9,8 +9,8 @@ export default function Home() {
 
   return (
     
-    <div className="flex flex-row z-4">
-    <div className="min-h-screen flex">
+    <div className="flex flex-row">
+    <div className="min-h-screen flex absolute -z-1 lg:relative -z-1 flex-row">
       <NavBar />
     </div>
     <MainSector/>

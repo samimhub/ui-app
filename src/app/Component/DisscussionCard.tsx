@@ -31,7 +31,7 @@ type DisscussionItems={
 const DisscussionItems=({ImgUrl,title,description}:DisscussionItems)=>{
     return(
         <>
-         <div className="flex w-full items-start gap-5 rounded-2xl border p-4 overflow-hidden bg-slate-200 shadow ">
+         <div className="flex w-full items-start gap-5 rounded-md border p-4 overflow-hidden bg-slate-200 shadow ">
             <div className="flex flex-col">
              <Image src={ImgUrl} alt="user" width={85} height={85} className="rounded-full shadow-xl border-
             border-white"/>
